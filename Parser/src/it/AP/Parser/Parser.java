@@ -20,7 +20,7 @@ public class Parser {
 			throw new ParsingException("troppi operatori \"=\" trovati");
 		Parser.parser(this.albero, this.formula.replaceAll(" ", ""));
 		if(this.formula.indexOf('=') != -1 &&	//controllla se c'e' l'uguale
-				(!this.albero.getValore().equals(Parser.uguale[0]) ||		//controlla se l'operatore uguale � in prima posizione ossia se � la radice dell'albero
+				(!this.albero.getValore().equals(Parser.uguale[0]) ||		//controlla se l'operatore uguale è in prima posizione ossia se è la radice dell'albero
 				!(this.albero.getNodi().get(0).getTipoValore() == TipoValore.variabile ||  //cotrolla se l'oggetto a cui si sta assegnando sia una variabile
 				  this.albero.getNodi().get(0).getTipoValore() == TipoValore.funzione)))   //o una funzione
 			throw new ParsingException("Errore nel parsing dell'assegnamento");
@@ -44,26 +44,26 @@ public class Parser {
 			n.setValore(s.charAt(indiceSeparatore) + "");
 			//settiamo il tipo di nodo a nodo
 			n.setTipoNodo(TipoNodo.nodo);
-			//l'etichetta � un operatore
+			//l'etichetta è un operatore
 			n.setTipoValore(TipoValore.operatore);
 			//dividiamo in 2 blocchi
 			if(indiceSeparatore == 0){
-			    //probabilmente � un meno negativo
+			    //probabilmente è un meno negativo
 			    s = "0"+s;
 			    indiceSeparatore++;
 			}
 			String p1 = s.substring(0, indiceSeparatore);
 			String p2 = s.substring(indiceSeparatore + 1);
 			
-			Parser.parser(n1, p1);	//ricorsione 1� blocco
-			Parser.parser(n2, p2);	//ricorsione 2� blocco
+			Parser.parser(n1, p1);	//ricorsione 1° blocco
+			Parser.parser(n2, p2);	//ricorsione 2° blocco
 			
 			n.getNodi().add(n1);	//aggiunta alla lista nodi
 			n.getNodi().add(n2);
 			
 		}
 		else if(s.charAt(0)=='(' && s.charAt(s.length()-1)==')'){
-		    //se la stringa � circondata da parentesi, basta estrarre il contenutoParentesi 
+		    //se la stringa è circondata da parentesi, basta estrarre il contenutoParentesi 
 		    //e ri-invocare il metodo sullo stesso nodo.
 		    String contenutoParentesi= s.substring(1,s.length()-1);
 		    Parser.parser(n, contenutoParentesi);
@@ -140,7 +140,7 @@ public class Parser {
 		        index--;
 		    }
 		    if(index == -1){
-		        //il nome e' valido
+		        //il nome è valido
 		        ret[0] = s.substring(0,primaParentesi);                 //nome della funzione
 		        ret[1] = s.substring(primaParentesi+1,s.length()-1);    //stringa argomenti
 		    }
