@@ -13,7 +13,7 @@ package it.AP.Parser;
 
 import java.util.ArrayList;
 
-	//Questa estensione esiste solo perche' a pietro non piace avere un file solo
+//Questa estensione esiste solo perche' a pietro non piace avere un file solo
 public class Esecutore extends Parser {
 	private ScopeVariabili scopeVar;
 	private ScopeFunzioni scopeFunz;
@@ -54,6 +54,7 @@ public class Esecutore extends Parser {
 		
 		if(n.getTipoValore() == TipoValore.operatore){
 			//esecuzione operazioni di operatore
+			//Piazziamo qui un controllo per l'uguale?
 			double sinistra = args.get(0);
 			double destra = args.get(1);
 			String op = n.getValore();
