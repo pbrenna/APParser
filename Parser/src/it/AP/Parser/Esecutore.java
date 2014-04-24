@@ -13,7 +13,7 @@ package it.AP.Parser;
 
 import java.util.ArrayList;
 
-//Questa estensione esiste solo perche' a pietro non piace avere un file solo
+	//Questa estensione esiste solo perche' a pietro non piace avere un file solo
 public class Esecutore extends Parser {
 	private ScopeVariabili scopeVar;
 	private ScopeFunzioni scopeFunz;
