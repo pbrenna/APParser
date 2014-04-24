@@ -2,10 +2,10 @@ package it.AP.Parser;
 //Per poter usare questo parser basta richiamare la funzione esegui dopo aver inserito la formula
 //con l'apposito metodo setFormula; per poter definire il valore di una variabile basta usare l'assegnamento
 //es x = 3
-//si può assegnare anche il risultato di una espressione.
-//per poter creare una funzione la procedura � simile
+//si può assegnare  anche il risultato di una espressione.
+//per poter creare una funzione la procedura è simile
 //f(x)=x+3
-//lo scope della variabile x � solo interno alla funzione e non intacca il valore di una eventuale variabile
+//lo scope della variabile x è solo interno alla funzione e non intacca il valore di una eventuale variabile
 //x definita in precedenza.
 //le funzioni builtin sono: "log","sin","cos","tan","ln","arcsin","arccos","arctan","abs","rand","round"
 //mentre gli operatori sono : +, -, *, /, ^, =
