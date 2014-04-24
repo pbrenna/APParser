@@ -1,6 +1,7 @@
 package it.AP.Parser;
 
 public enum CosESuccesso {
-	assegnamento,
+	assegnamentoFunz,
+	assegnamentoVar,
 	espressione
 }

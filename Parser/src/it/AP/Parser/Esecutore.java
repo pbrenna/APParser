@@ -101,6 +101,7 @@ public class Esecutore extends Parser {
 				//salvare in scope
 				String nome= this.albero.getNodi().get(0).getValore();
 				this.scopeVar.setVariabile(nome, valoreVariabile);
+				return CosESuccesso.assegnamentoVar;
 			}
 			if (this.albero.getNodi().get(0).getTipoValore() == TipoValore.funzione){
 				Nodo funz = this.albero.getNodi().get(0);
@@ -120,8 +121,9 @@ public class Esecutore extends Parser {
 				}
 				//aggiungiamo allo scope
 				this.scopeFunz.setFunzione(funz.getValore(), mappa);
+				return CosESuccesso.assegnamentoFunz;
 			}
-			return CosESuccesso.assegnamento;
+			throw new StronzataException("Non dovresti arrivare qua");
 		} else {	//se invece è un'espressione e basta
 			double valoreRestituito = this.risolutore(this.albero, this.scopeVar);
 			this.scopeVar.setVariabile("ans", valoreRestituito);
